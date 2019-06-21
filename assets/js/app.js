@@ -111,7 +111,7 @@ function successHandle(statesData) {
     .attr("class", "tooltip")
     .offset([80, -60])
     .html(function (d) {
-      return (`${d.state}<br>Poverty: ${d.poverty}%<br>Obesity: ${d.obesity}% `);
+      return (`${d.state}<br>Poverty: ${d.poverty}%<br>Healthcare: ${d.obesity}% `);
     });
 
   // Step 7: Create tooltip in the chart
@@ -135,12 +135,12 @@ function successHandle(statesData) {
     .attr("x", 0 - (height / 2))
     .attr("dy", "1em")
     .attr("class", "axisText")
-    .text("Obese (%)");
+    .text("LACKS HEALTHCARE (%)");
 
   chartGroup.append("text")
     .attr("transform", `translate(${width / 2}, ${height + margin.top + 30})`)
     .attr("class", "axisText")
-    .text("In Poverty (%)");
+    .text("IN POVERTY (%)");
 }
 
 
